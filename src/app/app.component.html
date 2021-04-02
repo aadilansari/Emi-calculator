@@ -1,0 +1,35 @@
+<div class="container py-5">
+      
+  
+  <hr class="my-5">
+
+  <form (ngSubmit)="onSubmit(frm)" #frm=ngForm style="background-color: #ffffff;
+  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);" class="py-5 px-5" > 
+        <h1 class="text-center text-dark">EMI Calculator</h1>
+        <label for="amount">Amount Required</label>       
+       <input type="number" class="form-control" ngModel name="txtamount" placeholder="Enter amount" > 
+  
+       
+
+
+       
+       <label>Number of years</label>
+       
+       <ngx-slider [(value)]="value" [options]="options"></ngx-slider>
+       
+       <label>Interest Rate</label>
+       <input type="number" class="form-control" ngModel name="txtint" placeholder="Rate of Interest">
+      <button class="btn btn-danger my-3 d-grid m-auto col-2" > Calculate</button>
+
+       <hr/>
+       <h3 class="text-center">EMI to be paid Rs: {{emi}}</h3>
+       <!-- Total Amount to be paid
+      <h1> Rs: {{totalPay}}</h1>
+       Monthly Amount to be paid
+       <h1> Rs: {{monthly}}</h1> -->
+      
+  </form>
+</div>
+
+
+
